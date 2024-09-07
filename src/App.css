@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: bo;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.container {
+  width: 600px;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(38, 35, 35);
+}
+
+.addToDo {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 2rem;
+}
+
+.addToDo input {
+  width: 27rem;
+  font-size: 1.75rem;
+  background-color: transparent;
+}
+.addToDo button {
+  width: auto;
+  font-size: 1.75rem;
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.listItem span {
+  margin-left: 0.3rem;
+  font-size: 1.5rem;
+}
+.listItem button {
+  padding: 0.15rem;
+}
+
+.checkbox {
+  zoom: 1.5; /* Increase the size (1.5x) */
+}
