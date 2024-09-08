@@ -2,6 +2,8 @@ export const ShowTodo = ({ todoList, setTodoList }) => {
   const handleRemove = (_id) => {
     todoList = todoList.filter(({ id }) => id !== _id);
     setTodoList(todoList);
+    localStorage.setItem("todo", JSON.stringify(todoList));
+    setTodoList(todoList);
   };
   const handleCheckBox = (id) => {
     todoList = todoList.map((todo) => {
@@ -11,12 +13,13 @@ export const ShowTodo = ({ todoList, setTodoList }) => {
         return todo;
       }
     });
+    localStorage.setItem("todo", JSON.stringify(todoList));
     setTodoList(todoList);
   };
   return (
     <>
       {todoList.map((todo) => (
-        <div className="listItem">
+        <div className="listItem" key={todo.id}>
           <div>
             <input
               onChange={() => handleCheckBox(todo.id)}

@@ -4,7 +4,7 @@ import { AddToDo } from "./components/AddToDo";
 import { ShowTodo } from "./components/ShowToDo";
 
 function App() {
-  const initialState = [];
+  const initialState = JSON.parse(localStorage.getItem("todo")) || [];
   const [todoList, setTodoList] = useState(initialState);
   const [todoId, setTodoId] = useState(0);
 
